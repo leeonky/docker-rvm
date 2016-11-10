@@ -9,5 +9,6 @@ ADD rvm_install.sh $DEV_HOME/rvm_install.sh
 RUN /bin/bash --login $DEV_HOME/rvm_install.sh && \
 	rm -f $DEV_HOME/rvm_install.sh
 
+ADD tglgemsrc $DEV_HOME/.rvm/bin/
 RUN sudo chmod +x $DEV_HOME/.rvm/bin/tglgemsrc
 
