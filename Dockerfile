@@ -1,4 +1,4 @@
-FROM daocloud.io/leeonky/centos-7:1.0
+FROM daocloud.io/leeonky/centos-7:master-2e9aa25
 
 ###### tools for rvm install
 RUN sudo yum -y install \
