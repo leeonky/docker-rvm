@@ -1,14 +1,14 @@
 FROM daocloud.io/leeonky/centos-7:master-2e9aa25
 
+USER $USER_NAME
+
 ###### tools for rvm install
 RUN sudo yum -y install \
 	which
 
 ###### RVM
-ADD rvm_install.sh $DEV_HOME/rvm_install.sh
-RUN /bin/bash --login $DEV_HOME/rvm_install.sh && \
-	rm -f $DEV_HOME/rvm_install.sh
+RUN /bin/bash --login -c "gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 && ( \curl -sSL https://get.rvm.io | bash -s stable ) && source /home/$USER_NAME/.rvm/scripts/rvm"
 
-ADD tglgemsrc $DEV_HOME/.rvm/bin/
-RUN sudo chmod +x $DEV_HOME/.rvm/bin/tglgemsrc
+ADD tglgemsrc $USER_HOME/.rvm/bin/
+RUN sudo chmod +x $USER_HOME/.rvm/bin/tglgemsrc
 
