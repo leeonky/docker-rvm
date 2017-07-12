@@ -10,7 +10,7 @@ RUN sudo yum -y install \
 RUN /bin/bash --login -c "gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 && ( \curl -sSL https://get.rvm.io | bash -s stable ) && source /home/$USER_NAME/.rvm/scripts/rvm"
 
 ###### tools for install rails
-RUN yum install -y \
+RUN sudo yum install -y \
 	firefox \
 	postgresql-devel \
 	sqlite-devel.x86_64 \
