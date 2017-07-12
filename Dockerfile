@@ -16,7 +16,7 @@ RUN sudo yum install -y \
 	sqlite-devel.x86_64 \
 	wqy-microhei-fonts \
 	qtwebkit-devel && \
-	ln -s /usr/lib64/qt4/bin/qmake /usr/bin/qmake
+	sudo ln -s /usr/lib64/qt4/bin/qmake /usr/bin/qmake
 
 ADD tglgemsrc $USER_HOME/.rvm/bin/
 RUN sudo chmod +x $USER_HOME/.rvm/bin/tglgemsrc
