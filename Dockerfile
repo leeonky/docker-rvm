@@ -18,8 +18,8 @@ RUN sudo yum install -y \
 	postgresql-devel \
 	sqlite-devel.x86_64 \
 	wqy-microhei-fonts \
-	qtwebkit-devel && \
-	google-chrome-stable && \
+	qtwebkit-devel \
+	google-chrome-stable \
 	chromedriver && \
 	sudo yum clean all && \
 	sudo ln -s /usr/lib64/qt4/bin/qmake /usr/bin/qmake
