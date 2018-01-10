@@ -24,7 +24,7 @@ RUN sudo apt-get install -y \
 	sudo wget https://github.com/leeonky/tools_dev/raw/master/firefox-46.0.tar.bz2 && \
 	sudo tar -xvf firefox-46.0.tar.bz2 && \
 	sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox && \
-	rm firefox-46.0.tar.bz2
+	sudo rm firefox-46.0.tar.bz2
 
 ADD tglgemsrc $USER_HOME/bin/
 RUN sudo chmod +x $USER_HOME/bin/tglgemsrc
