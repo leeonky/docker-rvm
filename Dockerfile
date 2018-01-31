@@ -10,7 +10,7 @@ RUN /bin/bash --login -c "gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6
 	#( echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list )
 
 ###### tools for install rails
-RUN sudo apt-get install -y \
+RUN sudo apt-get update && sudo apt-get install -y \
 	chromium-browser \
 	chromium-chromedriver \
 	libcanberra0 libdbusmenu-glib4 libdbusmenu-gtk4 libgtk2.0-0 libgtk2.0-bin \
@@ -21,7 +21,7 @@ RUN sudo apt-get install -y \
 	fonts-wqy-microhei \
 	libqtwebkit-dev && \
 	cd /opt && \
-	sudo wget https://github.com/leeonky/tools_dev/raw/master/firefox-46.0.tar.bz2 && \
+	sudo wget https://gitee.com/leeonky/tools_dev/raw/master/firefox-46.0.tar.bz2 && \
 	sudo tar -xvf firefox-46.0.tar.bz2 && \
 	sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox && \
 	sudo rm firefox-46.0.tar.bz2
